@@ -1,0 +1,30 @@
+
+.fill {
+    text-align: center;
+    margin: 16px;
+    font-size: 96px;
+    color: #ccc;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .fill::before {
+    content: attr(data-item);
+    transition: all 1s ease-in-out;
+    color: green;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%; /* Start from the end of the container */
+    right: 0;
+    width: 0;
+    overflow: hidden;
+  }
+  
+  .fill:hover::before {
+    left: 0; /* Move to the beginning of the container */
+    width: 100%;
+  }
